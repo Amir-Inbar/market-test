@@ -7,7 +7,7 @@ const router = express.Router()
 // middleware that is specific to this router
 // router.use(requireAuth)
 
-router.get('/', log, /*requireAuth,*/ getForms)
+router.get('/', log, /*requireAuth, requireAdmin,*/ getForms)
 router.post('/', log, addForm)
 
 module.exports = router
