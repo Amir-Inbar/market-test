@@ -82,5 +82,10 @@ export default {
       this.$router.push("/");
     },
   },
+  computed: {
+    getForms() {
+      return this.$store.getters.getForms;
+    },
+  },
 };
 </script>

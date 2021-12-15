@@ -1,14 +1,15 @@
 import { httpService } from "./http.service"
-export const marketSerivce = {
-  add,
-  createForm
-  }
 
 
 const API = 'market'
 
-  async function add(form) {
+  async function addForm(form) {
+    console.log('form :>> ', form);
     return await httpService.post(`${API}`,{form})
+}
+
+async function query( ) {
+  return await httpService.get(API)
 }
 
 
@@ -23,3 +24,9 @@ function createForm() {
     }
 }
 
+
+export const marketSerivce = {
+  addForm,
+  createForm,
+  query
+  }
