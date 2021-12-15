@@ -33,48 +33,6 @@
 export default {
   data() {
     return {
-      tableData: [
-        {
-          name: "amir",
-          lastName: "amir",
-          email: "amircode@gmail.com",
-          web: "www.amirfds.com",
-          date: "2016 - 05 - 03",
-          experience: 0,
-          budget: 1,
-          password: "43rrwe",
-        },
-        {
-          name: "Tom",
-          lastName: "amir",
-          email: "amircode@gmail.com",
-          web: "www.amirfds.com",
-          date: "2016 - 05 - 03",
-          experience: 0,
-          budget: 0,
-          password: "43rrwe",
-        },
-        {
-          name: "Tom",
-          lastName: "amir",
-          email: "amircode@gmail.com",
-          web: "www.amirfds.com",
-          date: "2016 - 05 - 03",
-          experience: 0,
-          budget: 0,
-          password: "43rrwe",
-        },
-        {
-          name: "Tom",
-          lastName: "amir",
-          email: "amircode@gmail.com",
-          web: "www.amirfds.com",
-          date: "2016 - 05 - 03",
-          experience: 0,
-          budget: 0,
-          password: "43rrwe",
-        },
-      ],
       forms: "",
     };
   },
