@@ -1,6 +1,6 @@
 <template>
   <section class="admin-page">
-    <h1>User forms</h1>
+    <h1>Users forms</h1>
     <div class="admin-content flex">
       <el-table
         :data="tableData"
@@ -25,7 +25,7 @@
         </el-table-column>
       </el-table>
     </div>
-    <el-button type="primary">Back</el-button>
+    <el-button type="primary" @click="backHome">Back</el-button>
   </section>
 </template>
 
@@ -77,6 +77,10 @@ export default {
       ],
     };
   },
-  methods: {},
+  methods: {
+    backHome() {
+      this.$router.push("/");
+    },
+  },
 };
 </script>
