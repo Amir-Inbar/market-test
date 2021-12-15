@@ -1,4 +1,11 @@
 .navbar-container {
-  background: red;
-  color: black;
+  background-color: $clr2;
+  color: $clr5;
+  padding: 15px;
+  gap: 30px;
+  a {
+    color: $clr5;
+    text-decoration: none;
+    cursor: pointer; 
+  }
 }

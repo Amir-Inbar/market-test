@@ -12,23 +12,23 @@
 }
 // flex helpers
 
-.flex {
+// .flex {
 
-    display: flex;
+//     display: flex;
 
-    > *.full {
-        flex: 1;
-    }
-    &.column {
-        flex-direction: column;
-    }
-    &.justify-center {
-        justify-content: center;
-    }
-    &.align-center {
-        align-items: center;
-    }
-}
+//     > *.full {
+//         flex: 1;
+//     }
+//     &.column {
+//         flex-direction: column;
+//     }
+//     &.justify-center {
+//         justify-content: center;
+//     }
+//     &.align-center {
+//         align-items: center;
+//     }
+// }
 
 // Media helpers
 

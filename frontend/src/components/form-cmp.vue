@@ -1,25 +1,25 @@
 <template>
-  <section class="form-cmp">
-    <form @submit.prevent="add" class="flex">
+  <section class="form-cmp main-container">
+    <form @submit.prevent="add" class="flex main-latout">
       <h1>Form</h1>
       <label>
-        First name:
+        <span>First name:</span>
         <input type="text" v-model="user.fName" />
       </label>
       <label>
-        Last name:
+        <span>Last name:</span>
         <input type="text" v-model="user.lName" />
       </label>
       <label>
-        Email:
+        <span>Email:</span>
         <input type="email" v-model="user.email"/>
       </label>
       <label>
-        Web address:
+        <span>Web address:</span>
         <input type="url" v-model="user.webUrl" />
       </label>
       <label>
-        LinkdIn profile address:
+        <span>LinkdIn profile address:</span>
         <input type="url" v-model="user.LinkdInProfile"/>
       </label>
       <label>

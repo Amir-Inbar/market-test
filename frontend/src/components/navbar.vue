@@ -1,5 +1,8 @@
 <template>
-  <section class="navbar-container">A</section>
+  <section class="navbar-container flex">
+    <router-link to="/">Form</router-link>
+    <router-link to="/admin">Admin</router-link>
+  </section>
 </template>
 
 <script>
