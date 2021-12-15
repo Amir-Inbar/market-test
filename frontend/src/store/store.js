@@ -20,7 +20,7 @@ export const store = new Vuex.Store({
       try{
         updatedForm = await marketService.add(form)
         commit({type:'setForm',updatedForm})
-        return form
+        return updatedForm
       } catch(err){
         console.log('err :>> ', err);
       }
