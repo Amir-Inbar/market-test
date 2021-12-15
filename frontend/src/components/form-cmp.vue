@@ -1,6 +1,6 @@
 <template>
-  <section>
-    <form @submit.prevent="add">
+  <section class="form-cmp">
+    <form @submit.prevent="add" class="flex">
       <h1>Form</h1>
       <label>
         First name:
@@ -59,6 +59,7 @@ export default {
         LinkdInProfile: '',
         experience:0,
         budget:0,
+        data: Date.now()
       }
     }
   },
