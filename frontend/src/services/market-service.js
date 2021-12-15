@@ -4,7 +4,6 @@ import { httpService } from "./http.service"
 const API = 'market'
 
   async function addForm(form) {
-    console.log('form :>> ', form);
     return await httpService.post(`${API}`,{form})
 }
 

@@ -12,7 +12,7 @@ export const store = new Vuex.Store({
     forms:'',
   },
   getters:{
-    getForms(){
+    getForms(state){
       return state.forms
     }
   },
