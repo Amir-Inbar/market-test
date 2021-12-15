@@ -3,10 +3,9 @@
 }
 
 html {
-  //    font-family: Montserrat;
-  //    font-family: GreatVibes;
   font-family: Opensans, sans-serif;
-  color: $clr2;
+  font-size: 14px;
+  color: $clr3;
   line-height: 1.8;
 }
 
@@ -24,15 +23,10 @@ h6 {
   margin: 0 0 1rem;
 }
 
-h1 {
-  font-size: rem(60px);
-}
-
 img {
   width: 100%;
 }
 
 p {
   margin: 0 0 1rem;
-  max-width: 60ch;
 }

@@ -1,0 +1,14 @@
+.admin-page {
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  .admin-content {
+    text-align: center;
+  }
+  button {
+    max-width: 100px;
+    margin-block-start: 20px;
+  }
+}
