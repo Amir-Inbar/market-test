@@ -37,7 +37,7 @@ app.all('*', setupAsyncLocalStorage)
 
 app.use('/api/auth', authRoutes)
 app.use('/api/user', userRoutes)
-app.use('/api/review', marketRoutes)
+app.use('/api/market', marketRoutes)
 connectSockets(http, session)
 
 // Make every server-side-route to match the index.html
