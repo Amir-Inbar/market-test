@@ -21,9 +21,8 @@ async function query(query) {
 async function add(form) {
     try {
         const collection = await dbService.getCollection(collectionDb);
-        // const res = await collection.insertOne(form);
         const res = await collection.updateOne({ email: form.email }, { $setOnInsert: form }, { upsert: true });
-        if (!res.upsertedCount) throw 'err';
+        return res.upsertedCount;
     } catch (err) {
         logger.error('adding failed:', err);
         throw err;
