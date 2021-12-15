@@ -1,22 +1,24 @@
 export const marketSerivce = {
-  add
+  add,
+  createForm
   }
 
 
-const API = 'form'
+const API = 'market'
 
   async function add(form) {
     return await httpService.post(`${API}`,{form})
 }
 
 
-  const userForm = {
-      name:'',
-      lastName:'',
-      email:'',
-      web:'',
-      experience:0,
-      budget:0,
-  }
-
+function createForm() {
+    return {
+        name:'',
+        lastName:'',
+        email:'',
+        web:'',
+        experience:0,
+        budget:0,
+    }
+}
 
