@@ -1,9 +1,9 @@
 <template>
-  <section class="admin-page">
-    <h1>User forms</h1>
+  <section class="admin-page" v-if="forms">
+    <h1>Users forms</h1>
     <div class="admin-content flex">
       <el-table
-        :data="tableData"
+        :data="forms"
         :default-sort="{ prop: 'name', order: 'descending' }"
         style="width: 100%"
       >
@@ -25,7 +25,7 @@
         </el-table-column>
       </el-table>
     </div>
-    <el-button type="primary">Back</el-button>
+    <el-button type="primary" @click="backHome">Back</el-button>
   </section>
 </template>
 
@@ -33,50 +33,26 @@
 export default {
   data() {
     return {
-      tableData: [
-        {
-          name: "amir",
-          lastName: "amir",
-          email: "amircode@gmail.com",
-          web: "www.amirfds.com",
-          date: "2016 - 05 - 03",
-          experience: 0,
-          budget: 1,
-          password: "43rrwe",
-        },
-        {
-          name: "Tom",
-          lastName: "amir",
-          email: "amircode@gmail.com",
-          web: "www.amirfds.com",
-          date: "2016 - 05 - 03",
-          experience: 0,
-          budget: 0,
-          password: "43rrwe",
-        },
-        {
-          name: "Tom",
-          lastName: "amir",
-          email: "amircode@gmail.com",
-          web: "www.amirfds.com",
-          date: "2016 - 05 - 03",
-          experience: 0,
-          budget: 0,
-          password: "43rrwe",
-        },
-        {
-          name: "Tom",
-          lastName: "amir",
-          email: "amircode@gmail.com",
-          web: "www.amirfds.com",
-          date: "2016 - 05 - 03",
-          experience: 0,
-          budget: 0,
-          password: "43rrwe",
-        },
-      ],
+      forms: "",
     };
   },
-  methods: {},
+  async created() {
+    console.log(this.getForms());
+    this.forms = await this.$store.dispatch({ type: "getForms" });
+    console.log("this.forms :>> ", this.forms);
+  },
+  methods: {
+    backHome() {
+      this.$router.push("/");
+    },
+    getForms() {
+      console.log(
+        "this.$store.getters.getForms :>> ",
+        this.$store.getters.getForms
+      );
+      return this.$store.getters.getForms;
+    },
+  },
+  computed: {},
 };
 </script>

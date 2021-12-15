@@ -1,13 +1,12 @@
 const logger = require('../../services/logger.service')
 const userService = require('../user/user.service')
 const socketService = require('../../services/socket.service')
-const reviewService = require('./market.service')
+const marketService = require('./market.service')
 
-// GET LIST
+// GET FORMS
 async function query(req, res) {
     try {
-        var { query } = req;
-        const send = await boardService.query({ user: req.session.user, ...query });
+        const send = await marketService.query(req.query);
         res.json(send);
     } catch (err) {
         logger.error('Failed to get markets', err)
@@ -15,15 +14,13 @@ async function query(req, res) {
     }
 }
 
-// POST
+// POST FORM
 async function add(req, res) {
     try {
-        const { session, body } = req;
-        const { user } = session;
-        res.json(await boardService.add(body, user));
+        res.json(await marketService.add(req.body));
     } catch (err) {
         logger.error('Failed to add board', err);
-        res.status(500).send({ err: 'Failed to add board' });
+        res.status(500).send({ err: 'Failed to add form' });
     }
 }
 
