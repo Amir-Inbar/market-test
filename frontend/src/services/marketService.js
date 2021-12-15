@@ -18,7 +18,9 @@ function createForm() {
         email:'',
         web:'',
         experience:0,
+        
         budget:0,
+        
     }
 }
 
