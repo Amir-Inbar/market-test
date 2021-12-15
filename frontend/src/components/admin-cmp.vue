@@ -1,7 +1,5 @@
 <template>
-  <section>
-    <h1>Admin</h1>
-  </section>
+  <section class="admin-page"></section>
 </template>
 
 <script>
