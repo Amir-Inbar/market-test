@@ -5,8 +5,10 @@ import {store} from './store/store'
 import './assets/styles/main.scss'
 import './registerServiceWorker'
 import './styles/styles.scss'
+import Element from 'element-ui'
 
 Vue.config.productionTip = false
+Vue.use(Element)
 
 new Vue({
   router,
