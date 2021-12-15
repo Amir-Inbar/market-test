@@ -18,6 +18,7 @@ export const store = new Vuex.Store({
   actions: {
     async setForm({commit,state},{form}){
       try{
+        console.log('form action :>> ', form);
         updatedForm = await marketService.add(form)
         commit({type:'setForm',updatedForm})
         return updatedForm
