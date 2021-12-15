@@ -1,9 +1,9 @@
 <template>
-  <section class="admin-page">
+  <section class="admin-page" v-if="forms">
     <h1>Users forms</h1>
     <div class="admin-content flex">
       <el-table
-        :data="tableData"
+        :data="forms"
         :default-sort="{ prop: 'name', order: 'descending' }"
         style="width: 100%"
       >
@@ -75,12 +75,26 @@ export default {
           password: "43rrwe",
         },
       ],
+      forms: "",
     };
+  },
+  async created() {
+    console.log(this.getForms());
+    this.forms = await this.$store.dispatch({ type: "getForms" });
+    console.log("this.forms :>> ", this.forms);
   },
   methods: {
     backHome() {
       this.$router.push("/");
     },
+    getForms() {
+      console.log(
+        "this.$store.getters.getForms :>> ",
+        this.$store.getters.getForms
+      );
+      return this.$store.getters.getForms;
+    },
   },
+  computed: {},
 };
 </script>
