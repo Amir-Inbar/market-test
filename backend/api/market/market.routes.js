@@ -5,7 +5,7 @@ const { addForm, getForms } = require('./market.controller')
 const router = express.Router()
 
 // middleware that is specific to this router
-router.use(requireAuth)
+// router.use(requireAuth)
 
 router.get('/', log, /*requireAuth,*/ getForms)
 router.post('/', log, addForm)

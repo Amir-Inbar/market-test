@@ -2,6 +2,8 @@ const dbService = require('../../services/db.service')
 const ObjectId = require('mongodb').ObjectId
 const asyncLocalStorage = require('../../services/als.service')
 
+const collectionDb = 'forms';
+
 async function query(query) {
     try {
         const sort = _buildSortCriteria(query);
@@ -19,7 +21,9 @@ async function query(query) {
 async function add(form) {
     try {
         const collection = await dbService.getCollection(collectionDb);
-        const res = await collection.insertOne(form);
+        // const res = await collection.insertOne(form);
+        const res = await collection.updateOne({ email: form.email }, { $setOnInsert: form }, { upsert: true });
+        console.log('>>>>', res.parsed);
         return res.insertedId;
     } catch (err) {
         logger.error('adding failed:', err);
