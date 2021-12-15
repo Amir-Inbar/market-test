@@ -45,6 +45,7 @@
         >
         <el-slider v-model="value"></el-slider>
       </label>
+      <button @submit="add">Submit</button>
     </form>
   </section>
 </template>
@@ -54,6 +55,11 @@ export default {
   data() {
     return {
       value:0
+    }
+  },
+  methods: {
+    add() {
+      console.log('add');
     }
   }
 };
