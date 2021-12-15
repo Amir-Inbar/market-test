@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import {marketService} from '../services/marketService'
+import {marketService} from '../services/market-service'
 
 
 Vue.use(Vuex)
