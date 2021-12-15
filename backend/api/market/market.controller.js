@@ -21,7 +21,7 @@ async function add(req, res) {
         res.json(await marketService.add(req.body));
     } catch (err) {
         logger.error('Failed to add board', err);
-        res.status(500).send({ err: 'Failed to add board' });
+        res.status(500).send({ err: 'Failed to add form' });
     }
 }
 
