@@ -6,6 +6,7 @@ const marketService = require('./market.service')
 // GET FORMS
 async function query(req, res) {
     try {
+        console.log('req.query :>> ', req.query);
         const send = await marketService.query(req.query);
         res.json(send);
     } catch (err) {
